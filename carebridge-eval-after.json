@@ -1,0 +1,917 @@
+{
+  "metadata": {
+    "generatedAt": "2026-10-29T10:50:14.324Z",
+    "base": "http://localhost:3001",
+    "caseCount": 20,
+    "successCount": 20,
+    "notes": "범주 평가만 자동. 사실보존/환각/누락 적절성은 원문 및 결과를 사람이 직접 검수해야 합니다. 실제 AI API 실행 결과만 포함."
+  },
+  "metrics": {
+    "category_precision": 0.8916666666666666,
+    "category_recall": 0.975,
+    "avg_latency_ms": 2929.2
+  },
+  "results": [
+    {
+      "id": "CB-01",
+      "lang": "en",
+      "status": "ok",
+      "ms": 5050,
+      "expected": [
+        "식사",
+        "수분",
+        "이동"
+      ],
+      "predicted": [
+        "식사",
+        "수분",
+        "이동"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "거주자는 점심에 식사량의 절반을 섭취하고 물 한 컵을 마셨으며, 오후 2시에 보조를 받아 이동했습니다.",
+      "translation": "점심에 거주자는 식사량의 절반을 먹고 물 한 컵을 마셨습니다. 오후 2시에 보조를 받아 걸었습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "식사",
+          "detail": "거주자는 식사량의 절반을 먹었습니다.",
+          "evidence": "At lunch, the resident ate half a meal"
+        },
+        {
+          "category": "수분",
+          "detail": "거주자는 물 한 컵을 마셨습니다.",
+          "evidence": "drank one cup of water"
+        },
+        {
+          "category": "이동",
+          "detail": "오후 2시에 보조를 받아 걸었습니다.",
+          "evidence": "Walked with assistance at 2 PM"
+        }
+      ],
+      "handoff": "거주자는 점심에 식사량의 절반을 섭취하고 물 한 컵을 마셨으며, 오후 2시에 보조를 받아 이동했습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "half",
+        "one cup",
+        "2 PM"
+      ],
+      "forbidden_claims": [
+        "낙상 발생",
+        "발열"
+      ]
+    },
+    {
+      "id": "CB-02",
+      "lang": "vi",
+      "status": "ok",
+      "ms": 2614,
+      "expected": [
+        "식사",
+        "수분"
+      ],
+      "predicted": [
+        "식사",
+        "수분"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "아침 식사를 모두 섭취하고 두 잔의 물을 마신 기록입니다.",
+      "translation": "아침에, 돌봄을 받는 분이 아침 식사를 모두 먹고 두 잔의 물을 마셨습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "식사",
+          "detail": "아침 식사를 모두 먹음",
+          "evidence": "Buổi sáng, người được chăm sóc ăn hết bữa sáng"
+        },
+        {
+          "category": "수분",
+          "detail": "두 잔의 물을 마심",
+          "evidence": "uống hai cốc nước"
+        }
+      ],
+      "handoff": "아침 식사를 모두 섭취하고 두 잔의 물을 마신 기록입니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "ăn hết",
+        "hai cốc"
+      ],
+      "forbidden_claims": [
+        "낙상 발생"
+      ]
+    },
+    {
+      "id": "CB-03",
+      "lang": "zh",
+      "status": "ok",
+      "ms": 2897,
+      "expected": [
+        "식사",
+        "수분"
+      ],
+      "predicted": [
+        "식사",
+        "수분"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "점심 식사량이 적고 수분 섭취가 있었습니다.",
+      "translation": "점심은 삼분의 일을 먹었고, 물은 반 컵 마셨습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "식사",
+          "detail": "점심은 삼분의 일을 먹었습니다.",
+          "evidence": "午饭只吃了三分之一"
+        },
+        {
+          "category": "수분",
+          "detail": "물은 반 컵 마셨습니다.",
+          "evidence": "喝了半杯水"
+        }
+      ],
+      "handoff": "점심 식사량이 적고 수분 섭취가 있었습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "三分之一",
+        "半杯"
+      ],
+      "forbidden_claims": [
+        "전량 섭취"
+      ]
+    },
+    {
+      "id": "CB-04",
+      "lang": "en",
+      "status": "ok",
+      "ms": 2965,
+      "expected": [
+        "수면"
+      ],
+      "predicted": [
+        "수면"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "어젯밤 수면 시간과 각성 기록, 식사 정보 미기재.",
+      "translation": "어젯밤에 5시간 동안 잠을 잤고 두 번 깼습니다. 식사 정보는 기록되지 않았습니다.",
+      "missing": [
+        "식사 정보는 기록되지 않았습니다. 식사 여부를 확인해야 합니다."
+      ],
+      "items": [
+        {
+          "category": "수면",
+          "detail": "어젯밤에 5시간 동안 잠을 잤고 두 번 깼습니다.",
+          "evidence": "Slept for five hours last night and woke up twice."
+        }
+      ],
+      "handoff": "어젯밤 수면 시간은 5시간이며 두 번 깼습니다. 식사 정보는 기록되지 않았습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "five hours",
+        "twice"
+      ],
+      "forbidden_claims": [
+        "8시간 수면"
+      ]
+    },
+    {
+      "id": "CB-05",
+      "lang": "vi",
+      "status": "ok",
+      "ms": 2373,
+      "expected": [
+        "이동"
+      ],
+      "predicted": [
+        "이동",
+        "관찰"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "summary": "돌봄 대상자는 이동 지원이 필요하며, 낙상 기록은 없습니다.",
+      "translation": "돌봄 대상자는 이동할 때 지원이 필요합니다. 낙상에 대한 기록은 없습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "이동",
+          "detail": "돌봄 대상자는 이동할 때 지원이 필요합니다.",
+          "evidence": "Người được chăm sóc cần hỗ trợ khi đi lại."
+        },
+        {
+          "category": "관찰",
+          "detail": "낙상에 대한 기록은 없습니다.",
+          "evidence": "Không ghi nhận té ngã."
+        }
+      ],
+      "handoff": "다음 담당자에게 전달할 기록: 이동할 때 지원이 필요하며, 낙상 기록은 없습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "cần hỗ trợ",
+        "Không ghi nhận té ngã"
+      ],
+      "forbidden_claims": [
+        "낙상 발생"
+      ]
+    },
+    {
+      "id": "CB-06",
+      "lang": "zh",
+      "status": "ok",
+      "ms": 2357,
+      "expected": [
+        "관찰"
+      ],
+      "predicted": [
+        "관찰"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "어르신이 왼쪽 무릎 통증을 호소하였고, 발열은 없었습니다.",
+      "translation": "오늘 오후 어르신이 왼쪽 무릎이 아프다고 말씀하셨고, 발열은 없었습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "관찰",
+          "detail": "어르신이 왼쪽 무릎이 아프다고 말씀하셨고, 발열은 없었습니다.",
+          "evidence": "今天下午老人说左膝疼痛，没有发烧。"
+        }
+      ],
+      "handoff": "어르신이 왼쪽 무릎 통증을 호소하였고, 발열은 없었습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "左膝疼痛",
+        "没有发烧"
+      ],
+      "forbidden_claims": [
+        "고열 발생"
+      ]
+    },
+    {
+      "id": "CB-07",
+      "lang": "en",
+      "status": "ok",
+      "ms": 2516,
+      "expected": [
+        "식사",
+        "수분"
+      ],
+      "predicted": [
+        "식사",
+        "수분"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "거주자는 아침을 거르고 점심을 충분히 먹었으며, 물을 200mL 섭취했습니다.",
+      "translation": "거주자는 아침 식사를 거르고 점심 식사를 충분히 하였으며, 200mL의 물을 마셨습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "식사",
+          "detail": "아침 식사를 거름, 점심 식사를 충분히 함",
+          "evidence": "The resident skipped breakfast, ate a full lunch"
+        },
+        {
+          "category": "수분",
+          "detail": "200mL의 물을 마심",
+          "evidence": "drank 200 mL of water"
+        }
+      ],
+      "handoff": "거주자는 아침을 거르고 점심을 충분히 먹었으며, 물을 200mL 섭취했습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "skipped breakfast",
+        "full lunch",
+        "200 mL"
+      ],
+      "forbidden_claims": [
+        "아침 식사 완료"
+      ]
+    },
+    {
+      "id": "CB-08",
+      "lang": "vi",
+      "status": "ok",
+      "ms": 2867,
+      "expected": [
+        "위생",
+        "기분"
+      ],
+      "predicted": [
+        "위생",
+        "기분"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "돌봄 대상자가 지원을 받아 목욕 후 기분이 좋다고 함.",
+      "translation": "돌봄 대상자가 지원을 받아 목욕을 하였고, 이후 기분이 좋다고 느꼈습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "위생",
+          "detail": "돌봄 대상자가 지원을 받아 목욕을 하였습니다.",
+          "evidence": "Người được chăm sóc tắm với sự hỗ trợ"
+        },
+        {
+          "category": "기분",
+          "detail": "돌봄 대상자가 기분이 좋다고 느꼈습니다.",
+          "evidence": "cảm thấy vui vẻ sau đó"
+        }
+      ],
+      "handoff": "다음 담당자에게 전달할 기록: 돌봄 대상자가 지원을 받아 목욕을 하였고, 이후 기분이 좋다고 느꼈습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "tắm",
+        "vui vẻ"
+      ],
+      "forbidden_claims": [
+        "우울 증상"
+      ]
+    },
+    {
+      "id": "CB-09",
+      "lang": "zh",
+      "status": "ok",
+      "ms": 2639,
+      "expected": [
+        "수면",
+        "기분"
+      ],
+      "predicted": [
+        "수면",
+        "기분"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "저녁에 6시간 수면 후 아침에 기분이 평온함.",
+      "translation": "저녁에 6시간 잤고, 아침에 기분이 평온하다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "수면",
+          "detail": "저녁에 6시간 잤다.",
+          "evidence": "晚上睡了六小时"
+        },
+        {
+          "category": "기분",
+          "detail": "아침에 기분이 평온하다.",
+          "evidence": "早上情绪平静"
+        }
+      ],
+      "handoff": "다음 담당자에게 전달할 기록: 저녁에 6시간 수면 후 아침에 기분이 평온함.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "六小时",
+        "情绪平静"
+      ],
+      "forbidden_claims": [
+        "불안 증상"
+      ]
+    },
+    {
+      "id": "CB-10",
+      "lang": "en",
+      "status": "ok",
+      "ms": 3507,
+      "expected": [
+        "이동"
+      ],
+      "predicted": [
+        "이동"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "거주자가 오전 10시에 휠체어를 이용해 식당으로 이동함.",
+      "translation": "오전 10시에 거주자는 휠체어를 이용하여 식당으로 이동했습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "이동",
+          "detail": "오전 10시에 거주자는 휠체어를 이용하여 식당으로 이동했습니다.",
+          "evidence": "At 10 AM, the resident used a wheelchair to move to the dining room."
+        }
+      ],
+      "handoff": "거주자가 오전 10시에 휠체어를 이용해 식당으로 이동했습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "10 AM",
+        "wheelchair"
+      ],
+      "forbidden_claims": [
+        "독립 보행"
+      ]
+    },
+    {
+      "id": "CB-11",
+      "lang": "vi",
+      "status": "ok",
+      "ms": 2868,
+      "expected": [
+        "수분",
+        "식사"
+      ],
+      "predicted": [
+        "식사",
+        "수분"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "돌봄 대상자는 저녁 식사를 거부하고 물을 섭취했습니다.",
+      "translation": "돌봄 대상자는 저녁을 먹지 않고 물 한 컵을 마셨습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "식사",
+          "detail": "저녁을 먹지 않았습니다.",
+          "evidence": "Người được chăm sóc không ăn bữa tối."
+        },
+        {
+          "category": "수분",
+          "detail": "물 한 컵을 마셨습니다.",
+          "evidence": "Người được chăm sóc uống một cốc nước."
+        }
+      ],
+      "handoff": "돌봄 대상자는 저녁을 먹지 않고 물 한 컵을 마셨습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "một cốc",
+        "không ăn"
+      ],
+      "forbidden_claims": [
+        "저녁 식사 완료"
+      ]
+    },
+    {
+      "id": "CB-12",
+      "lang": "zh",
+      "status": "ok",
+      "ms": 2954,
+      "expected": [
+        "위생",
+        "관찰"
+      ],
+      "predicted": [
+        "위생",
+        "관찰"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "오전 목욕 후 노인이 피곤함을 호소하며 휴식함.",
+      "translation": "오전 목욕 후, 노인이 매우 피곤하다고 말하며 반 시간 동안 휴식했습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "위생",
+          "detail": "오전 목욕 후",
+          "evidence": "上午洗澡后"
+        },
+        {
+          "category": "관찰",
+          "detail": "노인이 매우 피곤하다고 말함",
+          "evidence": "老人说很累"
+        },
+        {
+          "category": "관찰",
+          "detail": "반 시간 동안 휴식함",
+          "evidence": "休息了半小时"
+        }
+      ],
+      "handoff": "오전 목욕 후 노인이 피곤함을 호소하며 반 시간 동안 휴식했습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "洗澡",
+        "很累",
+        "半小时"
+      ],
+      "forbidden_claims": [
+        "기절"
+      ]
+    },
+    {
+      "id": "CB-13",
+      "lang": "en",
+      "status": "ok",
+      "ms": 2630,
+      "expected": [
+        "관찰"
+      ],
+      "predicted": [
+        "관찰"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "거주자가 오후에 두 번 기침을 했고, 체온은 측정되지 않았습니다.",
+      "translation": "거주자는 오후에 두 번 기침을 했습니다. 체온은 측정되지 않았습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "관찰",
+          "detail": "거주자는 오후에 두 번 기침을 했습니다.",
+          "evidence": "The resident coughed twice during the afternoon."
+        },
+        {
+          "category": "관찰",
+          "detail": "체온은 측정되지 않았습니다.",
+          "evidence": "Temperature was not measured."
+        }
+      ],
+      "handoff": "거주자가 오후에 두 번 기침을 했고, 체온은 측정되지 않았습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "coughed twice",
+        "not measured"
+      ],
+      "forbidden_claims": [
+        "체온 38도"
+      ]
+    },
+    {
+      "id": "CB-14",
+      "lang": "vi",
+      "status": "ok",
+      "ms": 2604,
+      "expected": [
+        "식사",
+        "이동"
+      ],
+      "predicted": [
+        "이동"
+      ],
+      "precision": 1,
+      "recall": 0.5,
+      "summary": "점심 식사 후 10분 동안 도움을 받아 이동함.",
+      "translation": "점심 식사 후, 돌봄 대상자는 도움을 받아 10분 동안 걸었습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "이동",
+          "detail": "점심 식사 후, 돌봄 대상자는 도움을 받아 10분 동안 걸었습니다.",
+          "evidence": "Sau bữa trưa, người được chăm sóc đi bộ 10 phút với sự giúp đỡ."
+        }
+      ],
+      "handoff": "점심 식사 후 10분 동안 도움을 받아 이동한 기록입니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "10 phút",
+        "giúp đỡ"
+      ],
+      "forbidden_claims": [
+        "독립적 보행"
+      ]
+    },
+    {
+      "id": "CB-15",
+      "lang": "zh",
+      "status": "ok",
+      "ms": 3072,
+      "expected": [
+        "식사",
+        "수분"
+      ],
+      "predicted": [
+        "식사",
+        "수분",
+        "기타"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 1,
+      "summary": "아침 식사 반, 오후 두 잔의 물 섭취, 저녁 기록 없음.",
+      "translation": "아침 식사를 반 정도 먹었고, 오후에 두 잔의 물을 마셨으며, 저녁에는 기록이 없습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "식사",
+          "detail": "아침 식사를 반 정도 먹었습니다.",
+          "evidence": "早餐吃了一半"
+        },
+        {
+          "category": "수분",
+          "detail": "오후에 두 잔의 물을 마셨습니다.",
+          "evidence": "下午喝了两杯水"
+        },
+        {
+          "category": "기타",
+          "detail": "저녁에는 기록이 없습니다.",
+          "evidence": "晚上没有记录"
+        }
+      ],
+      "handoff": "아침 식사 반 정도와 오후 두 잔의 물 섭취가 있었으며, 저녁에 대한 기록은 없습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "一半",
+        "两杯",
+        "没有记录"
+      ],
+      "forbidden_claims": [
+        "저녁 100% 식사"
+      ]
+    },
+    {
+      "id": "CB-16",
+      "lang": "en",
+      "status": "ok",
+      "ms": 2368,
+      "expected": [
+        "기분",
+        "수면"
+      ],
+      "predicted": [
+        "기분",
+        "수면"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "거주자는 취침 전 불안감을 느꼈고, 4시간 수면을 취했습니다.",
+      "translation": "거주자는 취침 전에 불안해했으며, 4시간 동안 잠을 잤습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "기분",
+          "detail": "거주자는 취침 전에 불안해했습니다.",
+          "evidence": "The resident was anxious before bedtime"
+        },
+        {
+          "category": "수면",
+          "detail": "거주자는 4시간 동안 잠을 잤습니다.",
+          "evidence": "slept for four hours"
+        }
+      ],
+      "handoff": "거주자는 취침 전 불안감을 느꼈고, 4시간 수면을 취했습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "anxious",
+        "four hours"
+      ],
+      "forbidden_claims": [
+        "숙면 8시간"
+      ]
+    },
+    {
+      "id": "CB-17",
+      "lang": "vi",
+      "status": "ok",
+      "ms": 3469,
+      "expected": [
+        "관찰"
+      ],
+      "predicted": [
+        "관찰",
+        "기타"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "summary": "돌봄 대상자가 두통을 호소하였으나 혈압 측정은 이루어지지 않았습니다.",
+      "translation": "돌봄 대상자가 두통이 있다고 말했습니다. 직원이 이를 기록했지만 혈압은 측정하지 않았습니다.",
+      "missing": [
+        "혈압 측정이 이루어지지 않은 이유는 무엇인가요?"
+      ],
+      "items": [
+        {
+          "category": "관찰",
+          "detail": "두통이 있다고 말함",
+          "evidence": "Người được chăm sóc nói đau đầu."
+        },
+        {
+          "category": "기타",
+          "detail": "혈압은 측정하지 않음",
+          "evidence": "Nhân viên đã ghi nhận nhưng không đo huyết áp."
+        }
+      ],
+      "handoff": "돌봄 대상자가 두통을 호소하고 있으며 혈압 측정은 이루어지지 않았습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "đau đầu",
+        "không đo huyết áp"
+      ],
+      "forbidden_claims": [
+        "혈압 정상 측정"
+      ]
+    },
+    {
+      "id": "CB-18",
+      "lang": "zh",
+      "status": "ok",
+      "ms": 2821,
+      "expected": [
+        "이동"
+      ],
+      "predicted": [
+        "이동"
+      ],
+      "precision": 1,
+      "recall": 1,
+      "summary": "노인이 오후에 보행 보조기를 사용하여 5분 동안 이동하였고, 낙상은 보고되지 않았습니다.",
+      "translation": "노인이 오후에 보행 보조기를 사용하여 5분 동안 걸었습니다. 낙상 보고는 없습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "이동",
+          "detail": "노인이 오후에 보행 보조기를 사용하여 5분 동안 걸었습니다.",
+          "evidence": "老人下午使用助行器走了五分钟"
+        },
+        {
+          "category": "이동",
+          "detail": "낙상 보고는 없습니다.",
+          "evidence": "没有报告跌倒"
+        }
+      ],
+      "handoff": "노인이 오후에 보행 보조기를 사용하여 5분 동안 걸었으며, 낙상은 보고되지 않았습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "助行器",
+        "五分钟",
+        "没有报告跌倒"
+      ],
+      "forbidden_claims": [
+        "낙상 발생"
+      ]
+    },
+    {
+      "id": "CB-19",
+      "lang": "en",
+      "status": "ok",
+      "ms": 3018,
+      "expected": [
+        "식사"
+      ],
+      "predicted": [
+        "식사",
+        "기타"
+      ],
+      "precision": 0.5,
+      "recall": 1,
+      "summary": "거주자가 저녁 식사를 거부하였고, 약물 정보는 기록되지 않았습니다.",
+      "translation": "거주자는 저녁 식사를 거부했습니다. 돌봄 직원은 약물 정보가 없음을 기록했습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "식사",
+          "detail": "거주자는 저녁 식사를 거부했습니다.",
+          "evidence": "The resident refused the evening meal."
+        },
+        {
+          "category": "기타",
+          "detail": "돌봄 직원은 약물 정보가 없음을 기록했습니다.",
+          "evidence": "The care worker recorded no medication information."
+        }
+      ],
+      "handoff": "거주자가 저녁 식사를 거부하였고, 약물 정보는 기록되지 않았습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "refused",
+        "no medication information"
+      ],
+      "forbidden_claims": [
+        "투약 완료"
+      ]
+    },
+    {
+      "id": "CB-20",
+      "lang": "vi",
+      "status": "ok",
+      "ms": 2995,
+      "expected": [
+        "수면",
+        "기분"
+      ],
+      "predicted": [
+        "수면",
+        "기분",
+        "수분"
+      ],
+      "precision": 0.6666666666666666,
+      "recall": 1,
+      "summary": "돌봄 대상자가 저녁에 일찍 잠들었고 기분이 차분했습니다.",
+      "translation": "저녁에 돌봄 대상자가 일찍 잠들었고, 기분은 차분했습니다. 음료 섭취량에 대한 정보는 없습니다.",
+      "missing": [],
+      "items": [
+        {
+          "category": "수면",
+          "detail": "저녁에 돌봄 대상자가 일찍 잠들었습니다.",
+          "evidence": "Buổi tối, người được chăm sóc ngủ sớm"
+        },
+        {
+          "category": "기분",
+          "detail": "기분은 차분했습니다.",
+          "evidence": "tâm trạng bình tĩnh"
+        },
+        {
+          "category": "수분",
+          "detail": "음료 섭취량에 대한 정보는 없습니다.",
+          "evidence": "không có thông tin về lượng nước uống"
+        }
+      ],
+      "handoff": "다음 담당자에게 전달할 기록: 저녁에 돌봄 대상자가 일찍 잠들었고 기분이 차분했습니다. 음료 섭취량에 대한 정보는 없습니다.",
+      "manual_review": {
+        "facts_preserved": null,
+        "unsupported_fact": null,
+        "missing_appropriate": null,
+        "notes": ""
+      },
+      "gold_evidence": [
+        "ngủ sớm",
+        "bình tĩnh",
+        "không có thông tin"
+      ],
+      "forbidden_claims": [
+        "충분한 수분 섭취 확인"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,382 @@
+[
+  {
+    "id": "CB-01",
+    "language": "en",
+    "note": "At lunch, the resident ate half a meal and drank one cup of water. Walked with assistance at 2 PM.",
+    "gold_categories": [
+      "식사",
+      "수분",
+      "이동"
+    ],
+    "evidence_tokens": [
+      "half",
+      "one cup",
+      "2 PM"
+    ],
+    "forbidden_claims_ko": [
+      "낙상 발생",
+      "발열"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-02",
+    "language": "vi",
+    "note": "Buổi sáng, người được chăm sóc ăn hết bữa sáng và uống hai cốc nước.",
+    "gold_categories": [
+      "식사",
+      "수분"
+    ],
+    "evidence_tokens": [
+      "ăn hết",
+      "hai cốc"
+    ],
+    "forbidden_claims_ko": [
+      "낙상 발생"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-03",
+    "language": "zh",
+    "note": "午饭只吃了三分之一，喝了半杯水。",
+    "gold_categories": [
+      "식사",
+      "수분"
+    ],
+    "evidence_tokens": [
+      "三分之一",
+      "半杯"
+    ],
+    "forbidden_claims_ko": [
+      "전량 섭취"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-04",
+    "language": "en",
+    "note": "Slept for five hours last night and woke up twice. No meal information was recorded.",
+    "gold_categories": [
+      "수면"
+    ],
+    "evidence_tokens": [
+      "five hours",
+      "twice"
+    ],
+    "forbidden_claims_ko": [
+      "8시간 수면"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-05",
+    "language": "vi",
+    "note": "Người được chăm sóc cần hỗ trợ khi đi lại. Không ghi nhận té ngã.",
+    "gold_categories": [
+      "이동"
+    ],
+    "evidence_tokens": [
+      "cần hỗ trợ",
+      "Không ghi nhận té ngã"
+    ],
+    "forbidden_claims_ko": [
+      "낙상 발생"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-06",
+    "language": "zh",
+    "note": "今天下午老人说左膝疼痛，没有发烧。",
+    "gold_categories": [
+      "관찰"
+    ],
+    "evidence_tokens": [
+      "左膝疼痛",
+      "没有发烧"
+    ],
+    "forbidden_claims_ko": [
+      "고열 발생"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-07",
+    "language": "en",
+    "note": "The resident skipped breakfast, ate a full lunch, and drank 200 mL of water.",
+    "gold_categories": [
+      "식사",
+      "수분"
+    ],
+    "evidence_tokens": [
+      "skipped breakfast",
+      "full lunch",
+      "200 mL"
+    ],
+    "forbidden_claims_ko": [
+      "아침 식사 완료"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-08",
+    "language": "vi",
+    "note": "Người được chăm sóc tắm với sự hỗ trợ và cảm thấy vui vẻ sau đó.",
+    "gold_categories": [
+      "위생",
+      "기분"
+    ],
+    "evidence_tokens": [
+      "tắm",
+      "vui vẻ"
+    ],
+    "forbidden_claims_ko": [
+      "우울 증상"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-09",
+    "language": "zh",
+    "note": "晚上睡了六小时，早上情绪平静。",
+    "gold_categories": [
+      "수면",
+      "기분"
+    ],
+    "evidence_tokens": [
+      "六小时",
+      "情绪平静"
+    ],
+    "forbidden_claims_ko": [
+      "불안 증상"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-10",
+    "language": "en",
+    "note": "At 10 AM, the resident used a wheelchair to move to the dining room.",
+    "gold_categories": [
+      "이동"
+    ],
+    "evidence_tokens": [
+      "10 AM",
+      "wheelchair"
+    ],
+    "forbidden_claims_ko": [
+      "독립 보행"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-11",
+    "language": "vi",
+    "note": "Người được chăm sóc uống một cốc nước nhưng không ăn bữa tối.",
+    "gold_categories": [
+      "수분",
+      "식사"
+    ],
+    "evidence_tokens": [
+      "một cốc",
+      "không ăn"
+    ],
+    "forbidden_claims_ko": [
+      "저녁 식사 완료"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-12",
+    "language": "zh",
+    "note": "上午洗澡后，老人说很累，休息了半小时。",
+    "gold_categories": [
+      "위생",
+      "관찰"
+    ],
+    "evidence_tokens": [
+      "洗澡",
+      "很累",
+      "半小时"
+    ],
+    "forbidden_claims_ko": [
+      "기절"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-13",
+    "language": "en",
+    "note": "The resident coughed twice during the afternoon. Temperature was not measured.",
+    "gold_categories": [
+      "관찰"
+    ],
+    "evidence_tokens": [
+      "coughed twice",
+      "not measured"
+    ],
+    "forbidden_claims_ko": [
+      "체온 38도"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-14",
+    "language": "vi",
+    "note": "Sau bữa trưa, người được chăm sóc đi bộ 10 phút với sự giúp đỡ.",
+    "gold_categories": [
+      "식사",
+      "이동"
+    ],
+    "evidence_tokens": [
+      "10 phút",
+      "giúp đỡ"
+    ],
+    "forbidden_claims_ko": [
+      "독립적 보행"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-15",
+    "language": "zh",
+    "note": "早餐吃了一半，下午喝了两杯水，晚上没有记录。",
+    "gold_categories": [
+      "식사",
+      "수분"
+    ],
+    "evidence_tokens": [
+      "一半",
+      "两杯",
+      "没有记录"
+    ],
+    "forbidden_claims_ko": [
+      "저녁 100% 식사"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-16",
+    "language": "en",
+    "note": "The resident was anxious before bedtime and slept for four hours.",
+    "gold_categories": [
+      "기분",
+      "수면"
+    ],
+    "evidence_tokens": [
+      "anxious",
+      "four hours"
+    ],
+    "forbidden_claims_ko": [
+      "숙면 8시간"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-17",
+    "language": "vi",
+    "note": "Người được chăm sóc nói đau đầu. Nhân viên đã ghi nhận nhưng không đo huyết áp.",
+    "gold_categories": [
+      "관찰"
+    ],
+    "evidence_tokens": [
+      "đau đầu",
+      "không đo huyết áp"
+    ],
+    "forbidden_claims_ko": [
+      "혈압 정상 측정"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-18",
+    "language": "zh",
+    "note": "老人下午使用助行器走了五分钟，没有报告跌倒。",
+    "gold_categories": [
+      "이동"
+    ],
+    "evidence_tokens": [
+      "助行器",
+      "五分钟",
+      "没有报告跌倒"
+    ],
+    "forbidden_claims_ko": [
+      "낙상 발생"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-19",
+    "language": "en",
+    "note": "The resident refused the evening meal. The care worker recorded no medication information.",
+    "gold_categories": [
+      "식사"
+    ],
+    "evidence_tokens": [
+      "refused",
+      "no medication information"
+    ],
+    "forbidden_claims_ko": [
+      "투약 완료"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  },
+  {
+    "id": "CB-20",
+    "language": "vi",
+    "note": "Buổi tối, người được chăm sóc ngủ sớm, tâm trạng bình tĩnh; không có thông tin về lượng nước uống.",
+    "gold_categories": [
+      "수면",
+      "기분"
+    ],
+    "evidence_tokens": [
+      "ngủ sớm",
+      "bình tĩnh",
+      "không có thông tin"
+    ],
+    "forbidden_claims_ko": [
+      "충분한 수분 섭취 확인"
+    ],
+    "expected_missing_topic_keywords_ko": [
+      "투약"
+    ]
+  }
+]
